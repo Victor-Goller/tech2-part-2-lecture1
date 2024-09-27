@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Sep 25 13:43:21 2024
-
-@author: victo
-"""
-
 """
 Part 2, Lecture 1, Example 1
 
@@ -28,20 +21,19 @@ def argmax(values):
         Maximum value
     """
 
-    # ADD YOUR IMPLEMENTATION HERE
     N = len(values)
+
     imax = 0
     vmax = values[0]
-    
+
     for i in range(1, N):
-        #Current value
         v = values[i]
-        if v> vmax:
-            #Update index and value of maximim
+        if v > vmax:
             imax = i
             vmax = v
-            
+
     return imax, vmax
+
 
 def main():
 
@@ -49,10 +41,8 @@ def main():
     values = [2, 3, -1, 7, 4]
 
     # Use argmax() to locale the maximum
-    
     imax, vmax = argmax(values)
-    # ADD YOUR IMPLEMENTATION HERE
-    print(f"Location of max{imax}, values: {vmax}")
+    print(f'Max. value is {vmax} located at index {imax}')
 
 if __name__ == '__main__':
     main()
